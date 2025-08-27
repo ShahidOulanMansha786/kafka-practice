@@ -11,7 +11,7 @@ public class KafkaConfig {
     @Bean
     public NewTopic topic() {
         return TopicBuilder
-                .name("location-update-topic")
+                .name(AppConstant.LOCATION_TOPIC_NAME)
                 .build();
     }
 }
