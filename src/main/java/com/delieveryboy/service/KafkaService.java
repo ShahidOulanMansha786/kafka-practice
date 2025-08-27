@@ -9,8 +9,8 @@ public class KafkaService {
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
 
-    public boolean updateLocation(String location) {
+    public void updateLocation(String location) {
         kafkaTemplate.send(AppConstant.LOCATION_TOPIC_NAME, location);
-        return true;
+
     }
 }
